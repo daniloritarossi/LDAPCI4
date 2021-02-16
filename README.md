@@ -12,7 +12,7 @@ public $classmap = [
 ];
 3. Create new controller like this copy and past:<br>
 
-<blink>
+<code>
 
 namespace app\Controllers;
 
@@ -98,7 +98,7 @@ class Login extends Controller {
 		}		
 	}	
 }
-<blink>
+<code>
 
 
 
