@@ -5,12 +5,13 @@ This project based on package of Greg Wojtak LDAP library.
 Use this library with Codeigniter 4.1+ PHP7.4+
 ---------------------
 User Guide: 
-* put the file in folder project app/ThirdParty/
-* set autoload class, go to app/Config/Autoload.php search the public variable $classmap and add this
+1. put the file in folder project app/ThirdParty/
+2. set autoload class, go to app/Config/Autoload.php search the public variable $classmap and add this
 public $classmap = [
 'Auth_Ldap' => APPPATH .'third_party/Auth_Ldap.php'
 ];
-* Create new controller like this copy and past:<br>
+3. Create new controller like this copy and past:<br>
+
 <blink> 
 <?php
 namespace app\Controllers;
@@ -18,15 +19,10 @@ namespace app\Controllers;
 use CodeIgniter\Controller;
 use App\ThirdParty\Auth_Ldap;
  
-class Login extends Controller {
-	//Costruttore
+class Login extends Controller {	
 	public function __construct() {		
 		$this->session = \Config\Services::session();
-		helper ( [ 
-				'form',
-				'url',
-				'cookie'
-		] );
+		helper ( [ 'form','url','cookie'] );
 	}
 
 	//MAIN FUNCTION	 
