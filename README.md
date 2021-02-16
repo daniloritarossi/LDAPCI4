@@ -21,7 +21,6 @@ class Login extends Controller {
 		$this->session = \Config\Services::session();
 		helper ( [ 'form','url','cookie'] );
 	}
-
 	//MAIN FUNCTION	 
 	public function index() {	
 	 // Change this with your code Header/Page/Footer	
