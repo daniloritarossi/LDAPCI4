@@ -21,9 +21,9 @@ use App\ThirdParty\Auth_Ldap;
 
 
 /*
-  This file is part of LDAPCI4.
+  This file is part of AUTH LDAPCI4.
 
- LDAPCI4 is free software: you can redistribute it and/or modify
+ AUTH LDAPCI4 is free software: you can redistribute it and/or modify
  it under the terms of the GNU Lesser General Public License as published by
  the Free Software Foundation, either version 3 of the License, or
  (at your option) any later version.
