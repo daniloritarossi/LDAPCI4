@@ -12,8 +12,7 @@ public $classmap = [
 ];
 3. Create new controller like this copy and past:<br>
 
-<blink> 
-<?php
+<blink>
 namespace app\Controllers;
 <blink>
 use CodeIgniter\Controller;
