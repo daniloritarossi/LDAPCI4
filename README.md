@@ -50,10 +50,7 @@ use App\ThirdParty\Auth_Ldap;
  * @license GNU Lesser General Public License
  */
 class Login extends Controller {
-	/**
-	 * Costruttore
-	 */
-	public $userModel;
+	//Costruttore
 	public function __construct() {		
 		$this->session = \Config\Services::session();
 		helper ( [ 
@@ -63,9 +60,7 @@ class Login extends Controller {
 		] );
 	}
 
-	/**
-	 * MAIN FUNCTION
-	 */
+	//MAIN FUNCTION	 
 	public function index() {	
 	 // Change this with your code Header/Page/Footer	
 		echo view ( 'Header/Header' );
@@ -73,21 +68,17 @@ class Login extends Controller {
 		echo view ( 'Footer/Footer' );
 	}
 
-	/**
-	 * Public function for Logout
-	 */
+	// Public function for Logout
 	public function logout(){
 		$ldapCkeckLogin = new Auth_Ldap ();
 		$ldapCkeckLogin->logout ();
 		return redirect()->to('/Login'); 
 	}
 	
-	/**
-	 * Function based on LDAP LIBRARY.
-	 *
-	 * @param $result $errorMsg
-	 *        	Return true if login successfull false otherwise
-	 */
+	
+	// Function based on LDAP LIBRARY.
+	// @param $result $errorMsg
+	//  	Return true if login successfull false otherwise
 	function access($errorMsg = NULL) {
 		$result = array();
 	
