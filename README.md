@@ -13,14 +13,20 @@ public $classmap = [
 3. Create new controller like this copy and past:<br>
 
 <blink>
+
 namespace app\Controllers;
+
 use CodeIgniter\Controller;
+
 use App\ThirdParty\Auth_Ldap;
-class Login extends Controller {	
+
+class Login extends Controller {
+	
 	public function __construct() {		
 		$this->session = \Config\Services::session();
 		helper ( [ 'form','url','cookie'] );
 	}
+	
 	//MAIN FUNCTION	 
 	public function index() {	
 	 // Change this with your code Header/Page/Footer	
