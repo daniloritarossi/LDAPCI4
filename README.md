@@ -27,7 +27,7 @@ use CodeIgniter\Controller;
 use App\ThirdParty\Auth_Ldap;
 
 
-/*
+/**
   This file is part of AUTH LDAPCI4.
 
  AUTH LDAPCI4 is free software: you can redistribute it and/or modify
@@ -45,7 +45,7 @@ use App\ThirdParty\Auth_Ldap;
 */
 
 
-/*
+/**
   AUTH LDAPCI4 Simple LDAP Authentication controller for Codeigniter 4.1.
  
   @package AUTH LDAPCI4
