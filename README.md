@@ -14,7 +14,7 @@ public $classmap = [
 'Auth_Ldap' => APPPATH .'third_party/Auth_Ldap.php'
 ];
 3.Create new controller like this copy and past:
-(&) <?php
+<blink> <?php
 
 namespace app\Controllers;
 
@@ -131,4 +131,4 @@ class Login extends Controller {
 		}		
 	}	
 }
-(&)
+<blink>
