@@ -16,7 +16,6 @@ public $classmap = [
 namespace app\Controllers;
 use CodeIgniter\Controller; 
 use App\ThirdParty\Auth_Ldap;
- 
 class Login extends Controller { 	
 	public function __construct() {		
 		$this->session = \Config\Services::session();
