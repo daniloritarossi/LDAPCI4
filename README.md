@@ -12,12 +12,10 @@ public $classmap = [
 ];
 3. Create new controller like this copy and past:<br>
 
-<code>
-
+<code><?php
 namespace app\Controllers;
 
 use CodeIgniter\Controller;
-
 use App\ThirdParty\Auth_Ldap;
 
 class Login extends Controller {
