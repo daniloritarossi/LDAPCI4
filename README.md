@@ -1,5 +1,6 @@
-# AUTH LDAPCI4<br>Simple LDAP Authentication controller for Codeigniter 4.1.
+# AUTH LDAPCI4
 ====================
+##Simple LDAP Authentication controller for Codeigniter 4.1.
 
 This project based on package of Greg Wojtak LDAP library.
 Use this library with Codeigniter 4.1+ PHP7.4+
@@ -12,10 +13,11 @@ public $classmap = [
 ];
 3. Create new controller like this, copy and past the example:<br>
 
-<code><?php<br>
+```<?php
 namespace app\Controllers;
 use CodeIgniter\Controller; 
 use App\ThirdParty\Auth_Ldap;
+
 class Login extends Controller { 	
 	public function __construct() {		
 		$this->session = \Config\Services::session();
@@ -93,7 +95,7 @@ class Login extends Controller {
 		}		
 	}	
 }
-<code>
+```
 
 
 
