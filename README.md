@@ -12,11 +12,11 @@ public $classmap = [
 ];
 3. Create new controller like this copy and past:<br>
 
-<code><?php<br>
-namespace app\Controllers;<br>
-use CodeIgniter\Controller;<br>
-use App\ThirdParty\Auth_Ldap;<br>
-class Login extends Controller {<br>	
+<code><?php <br>
+namespace app\Controllers; <br>
+use CodeIgniter\Controller; <br>
+use App\ThirdParty\Auth_Ldap; <br>
+class Login extends Controller { <br>	
 	public function __construct() {		
 		$this->session = \Config\Services::session();
 		helper ( [ 'form','url','cookie'] );
