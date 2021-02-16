@@ -1,7 +1,7 @@
 # AUTH LDAPCI4
 ====================
 
-##Simple LDAP Authentication controller for Codeigniter 4.1.
+##Simple AUTH LDAPCI4 Authentication controller for Codeigniter 4.1.
 
 This project based on package of Greg Wojtak LDAP library.
 Use this library with Codeigniter 4.1+ PHP7.4+
