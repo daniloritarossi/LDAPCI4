@@ -62,6 +62,7 @@ class Auth_ldap extends \CodeIgniter\Config\BaseConfig {
 			),
 			
 			'use_tls' => false,
+			'use_ssl' => false,
 			'use_ad' => true,
 			'ad_domain' => 'mycompany.com',
 			'login_attribute' => 'uid',

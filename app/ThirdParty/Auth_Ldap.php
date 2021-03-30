@@ -75,6 +75,7 @@ class Auth_Ldap {
 		$this->auditlog = $config->config ['auditlog'];
 		$this->member_attribute = $config->config ['member_attribute'];
 		$this->user_object_class = $config->config ['user_object_class'];
+		$this->use_ssl = $config->config ['user_object_class'];
 	}
 	
 	/**
@@ -213,6 +214,12 @@ class Auth_Ldap {
 		// They should also work with any modern LDAP service.
 		ldap_set_option ( $this->ldapconn, LDAP_OPT_REFERRALS, 0 );
 		ldap_set_option ( $this->ldapconn, LDAP_OPT_PROTOCOL_VERSION, 3 );
+		
+		
+		if ($this->use_ssl) {
+			log_message ( 'info', 'Attempting to start SSL' );
+			ldap_set_option($this->ldapconn, LDAP_OPT_X_TLS_REQUIRE_CERT, LDAP_OPT_X_TLS_ALLOW);
+		}
 		
 		// Find the DN of the user we are binding as
 		// If proxy_user and proxy_pass are set, use those, else bind anonymously
