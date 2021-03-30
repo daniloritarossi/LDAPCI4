@@ -245,7 +245,8 @@ class Auth_Ldap {
 				'enable',
 				$this->member_attribute,
 				'siglafunzionale',
-				'sn'
+				'sn',
+				$this->memberOf_attribute
 		) );
 		// $entries = ldap_get_entries($this->ldapconn, $search);
 		
@@ -268,14 +269,20 @@ class Auth_Ldap {
 			
 			$cn = $entries [0] ['cn'] [0];
 			$dn = stripslashes ( $entries [0] ['dn'] );
-			$id = $entries [0] [$this->login_attribute] [0];
+			$id = $entries [0] [$this->login_attribute] [0];			
 			
-			$get_role_arg = $id;
+			if(!empty($entries)){
+				$role = $this->_get_role ( $entries );
+				if($role === FALSE){
+					$role = "- - -";
+				}
+			}
+			
 			return array (
 					'cn' => $cn,
 					'dn' => $dn,
 					'id' => $id,
-					'role' => $this->_get_role ( $get_role_arg )
+					'role' => $role
 			);
 		} else {
 			$this->_audit ( "Failed login attempt: " . $username . " from " . $_SERVER ['REMOTE_ADDR'] );
@@ -334,24 +341,33 @@ class Auth_Ldap {
 	 * @param string $username
 	 * @return int
 	 */
-	private function _get_role($username) {
-		$filter = '(' . $this->member_attribute . '=' . $username . ')';
-		$search = ldap_search ( $this->ldapconn, $this->basedn, $filter, array (
-				'cn'
-		) );
-		if (! $search) {
+	private function _get_role(&$username) {
+		if (!empty($username)) {
+			
+			$role = FALSE;
+			foreach ($username[0] as $indx => $field){
+				if($indx === $this->memberOf_attribute){
+					$fields_attr = explode(",",$field [0]);
+					
+					foreach ($fields_attr as $attr){
+						$rslt = explode("=", $attr);
+						
+						if(array_search ($rslt [1], $this->roles ) !== FALSE){
+							$role = $rslt [1];
+							break;
+						}
+					}
+				}
+			}
+			if ($role !== FALSE) {
+				return $role;
+			}
+			
+		}else {
 			log_message ( 'error', "Error searching for group:" . ldap_error ( $this->ldapconn ) );
 			show_error ( 'Couldn\'t find groups: ' . ldap_error ( $this->ldapconn ) );
 		}
-		$results = ldap_get_entries ( $this->ldapconn, $search );
-		if ($results ['count'] != 0) {
-			for($i = 0; $i < $results ['count']; $i ++) {
-				$role = array_search ( $results [$i] ['cn'] [0], $this->roles );
-				if ($role !== FALSE) {
-					return $role;
-				}
-			}
-		}
+		
 		return false;
 	}
 }
