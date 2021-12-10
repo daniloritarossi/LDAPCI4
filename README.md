@@ -1,18 +1,41 @@
 # AUTH LDAPCI4
-====================
+## _Simple AUTH LDAPCI4 Authentication controller for Codeigniter 4.1_
+[![Danilo Ritarossi](https://media-exp1.licdn.com/dms/image/C5116AQHnrgF1Z-9Wyg/profile-displaybackgroundimage-shrink_200_800/0/1516649190076?e=1644451200&v=beta&t=uejYUnxpt_2lERCRXybdRFr4cRf8mGSMx2Y27EkVNsw)](https://www.linkedin.com/in/daniloritarossi/)
 
-Simple AUTH LDAPCI4 Authentication controller for Codeigniter 4.1.
----------------
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+![PowerShell Gallery](https://img.shields.io/powershellgallery/p/DNS.1.1.1.1)
+![Version](https://img.shields.io/static/v1?label=Version&message=1.0&color=<COLOR>)
 
-This project based on package of Greg Wojtak LDAP library.
-Use this library with Codeigniter 4.1+ PHP7.4+
+This project based on package of Greg Wojtak LDAP library. Use this library with Codeigniter 4.1+ PHP7.4+
 
-User Guide: 
-1. Copy folders and files under /app to your project
+## Features
 
-2. About your environment change the configuration for correct connection on app/Config/{environment}/AuthLdap.php
+- Compatibility with Codeigniter 4.1+ 
+- Compatible with LDAP
+- Developed in pure PHP 
+- Easy to use
 
-3. set autoload class, go to app/Config/Autoload.php 
+## Tech
+
+We use a number of open source projects to work properly:
+
+- [PHP] - Developed
+
+And of course Danilo itself is open source with a [public repository][daniloritarossi] on GitHub.
+
+## Installation
+
+AUTH LDAPCI4 requires [public repository][PHP] v7.4+ installed to run.
+
+Copy folders and files under **/app** to your project
+
+#### Easy to use
+
+
+- About your environment change the configuration for correct connection on app/Config/{environment}/AuthLdap.php
+
+- Set autoload class, go to app/Config/Autoload.php 
 	search the public variable ```$classmap``` and add this
 ```
 public $classmap = [
@@ -132,6 +155,20 @@ class Login extends Controller {
 	}	
 }
 ```
+## Development
 
+Want to contribute? Great!
 
+Make a change in your file and instantaneously see your updates!
 
+## License
+
+GNU General Public License v3.0
+The GNU General Public License v3.0 (GPL) — Danilo Ritarossi. Please have a look at the [public repository][LICENSE.md] for more details.
+
+**Free Software, Hell Yeah!**
+
+   [daniloritarossi]: <https://github.com/daniloritarossi>
+   [PHP]: <https://php.netv>
+   [LICENSE.md]: <https://github.com/daniloritarossi/LDAPCI4/blob/main/LICENSE>
+   
