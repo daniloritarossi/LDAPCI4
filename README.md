@@ -1,6 +1,6 @@
 # AUTH LDAPCI4
 ## _Simple AUTH LDAPCI4 Authentication controller for Codeigniter 4.1_
-[![Danilo Ritarossi](https://media-exp1.licdn.com/dms/image/C5116AQHnrgF1Z-9Wyg/profile-displaybackgroundimage-shrink_200_800/0/1516649190076?e=1644451200&v=beta&t=uejYUnxpt_2lERCRXybdRFr4cRf8mGSMx2Y27EkVNsw)](https://www.linkedin.com/in/daniloritarossi/)
+[![Danilo Ritarossi](https://media-exp1.licdn.com/dms/image/C5116AQHnrgF1Z-9Wyg/profile-displaybackgroundimage-shrink_200_800/0/1516649190076?e=1664409600&v=beta&t=OmqJIzDVHFn48tK7p9McwWiB3nVs2cHFWOTAkB4xUR0)](https://www.linkedin.com/in/daniloritarossi/)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
